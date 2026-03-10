@@ -1,0 +1,21 @@
+name: Ejecutar Pruebas E2E Cypress
+on: [push]
+
+jobs: 
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el código del repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      
+      - name: Instalar las dependencias
+        run: npm install
+
+      - name: Ejecutar las pruebas de Cypress (Modo consola)
+        run: npx cypress run
