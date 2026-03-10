@@ -36,5 +36,5 @@ Ejecuta las pruebas directamente en la terminal de forma silenciosa.
 ```bash
 npx cypress run
 ```
-Integración Continua (CI/CD)
+### Integración Continua (CI/CD)
 Este proyecto incluye un flujo de trabajo de GitHub Actions. Cada vez que se realiza un nuevo push al repositorio, se levanta automáticamente un entorno virtual (Ubuntu), se instalan las dependencias y se ejecutan todos los tests de Cypress en modo consola para asegurar la calidad del código de forma continua.
