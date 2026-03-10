@@ -1,4 +1,4 @@
-# Proyecto de Automatización QA - Cypress & Cucumber BDD
+# Proyecto de Automatización QA - Cypress & Cucumber BDD - Portfolio Project
 
 ## Descripción
 Este repositorio contiene un proyecto de automatización de pruebas End-to-End (E2E) para la aplicación web [SauceDemo](https://www.saucedemo.com/). 
