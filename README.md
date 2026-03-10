@@ -1,4 +1,5 @@
 # Automatización QA - Cypress & Cucumber BDD - Portfolio Project
+![Cypress Tests](https://github.com/FordFly/Cypress-Cucumber-BDD/actions/workflows/cypress-tests.yml/badge.svg)
 
 ## Descripción
 Este repositorio contiene un proyecto de automatización de pruebas End-to-End (E2E) para la aplicación web [SauceDemo](https://www.saucedemo.com/). 
