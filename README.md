@@ -1,22 +1,37 @@
 # Automatización QA - Cypress & Cucumber BDD - Portfolio Project
 ![Cypress Tests](https://github.com/FordFly/Cypress-Cucumber-BDD/actions/workflows/cypress-tests.yml/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=FordFly_Cypress-Cucumber-BDD&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=FordFly_Cypress-Cucumber-BDD)
 
 ## Descripción
 Este repositorio contiene un proyecto de automatización de pruebas End-to-End (E2E) para la aplicación web [SauceDemo](https://www.saucedemo.com/). 
 
-El framework está diseñado utilizando **Cypress** integrado con **Cucumber** para permitir el desarrollo guiado por comportamiento (BDD), escribiendo los escenarios de prueba en lenguaje natural (Gherkin). Además, cuenta con un pipeline de integración continua (CI) configurado de cero.
+El framework utiliza **Cypress** integrado con **Cucumber** (BDD) y un pipeline de **Integración Continua (CI)** configurado desde cero que audita la calidad del código y el rendimiento.
 
 ## Tecnologías utilizadas
-- **Cypress:** Framework principal de pruebas E2E.
-- **Cucumber / Gherkin:** Para la escritura de pruebas BDD.
-- **JavaScript:** Lenguaje de programación para la lógica de los *step definitions*.
-- **Node.js & npm:** Entorno de ejecución y gestión de dependencias (Node 20).
-- **GitHub Actions:** Pipeline de CI/CD para la ejecución automatizada en la nube.
+- **Cypress:** Framework principal para pruebas E2E y de API.
+- **Cucumber / Gherkin:** Escritura de pruebas bajo metodología BDD.
+- **GitHub Actions:** Pipeline de CI/CD para ejecución automatizada en la nube.
+- **SonarCloud:** Análisis estático de código para asegurar mantenibilidad y seguridad.
+- **Apache JMeter:** Pruebas de carga y rendimiento (Performance Testing).
+- **Node.js (v24):** Entorno de ejecución de última generación.
 
-## Estructura del Proyecto
-- `cypress/e2e/features/`: Contiene los archivos `.feature` con los escenarios en Gherkin (ej. `login.feature`).
-- `cypress/support/step_definitions/`: Contiene la lógica en JavaScript que conecta y ejecuta cada paso definido en Gherkin.
-- `.github/workflows/`: Contiene el archivo YAML que configura el robot de ejecución automática en GitHub.
+## Calidad y rendimiento
+
+### Auditoría de código (SonarCloud)
+El proyecto está integrado con **SonarCloud**. En cada `push`, el código es auditado para garantizar:
+- **0 Bugs y Vulnerabilidades.**
+- **Mantenibilidad:** Cumplimiento de estándares de código limpio (Clean Code).
+- **Seguridad:** Verificación automática de puntos críticos.
+
+### Pruebas de carga (JMeter)
+Se incluye un plan de pruebas de rendimiento (`.jmx`) que simula la carga de usuarios sobre la API para medir tiempos de respuesta (latencia) y estabilidad del servidor.
+
+## Estructura del proyecto
+- `cypress/e2e/features/`: Escenarios en Gherkin (`.feature`).
+- `cypress/support/step_definitions/`: Lógica en JavaScript para los pasos de prueba.
+- `.github/workflows/`: Configuración del robot de CI/CD (YAML).
+- `performance/`: Scripts de **JMeter** para pruebas de carga.
+- `sonar-project.properties`: Configuración de auditoría para SonarCloud.
 
 ## Instrucciones de Instalación y Ejecución
 
