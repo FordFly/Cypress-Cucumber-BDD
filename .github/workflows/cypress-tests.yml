@@ -12,9 +12,8 @@ jobs:
           fetch-depth: 0
 
       - name: Analizar código con SonarCloud
-        uses: SonarSource/sonarqube-scan-action@master
+        uses: SonarSource/sonarqube-scan-action@v6
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Instalar Node.js
