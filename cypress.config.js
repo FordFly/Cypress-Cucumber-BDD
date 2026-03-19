@@ -5,7 +5,7 @@ const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 
 module.exports = defineConfig({
   e2e: {
-    specPattern: "**/*.feature", // ¡Esta línea es la que hace que Cypress vea tu archivo!
+    specPattern: "**/*.feature",
     async setupNodeEvents(on, config) {
       await preprocessor.addCucumberPreprocessorPlugin(on, config);
       on(

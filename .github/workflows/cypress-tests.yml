@@ -1,13 +1,21 @@
 name: Ejecutar Pruebas E2E Cypress
 on: [push]
 
-jobs: 
+jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
     steps:
       - name: Descargar el código del repositorio
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Analizar código con SonarCloud
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Instalar Node.js
         uses: actions/setup-node@v4
